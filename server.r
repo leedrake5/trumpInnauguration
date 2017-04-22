@@ -82,11 +82,11 @@ function(input, output, session) {
   # according to the variables the user has chosen to map to color and size.
   observe({
      zipdata <- zipdataToo()
-    colorBy <- rev(as.numeric(as.vector(allzips$amount)))
-    sizeBy <- rev(as.numeric(as.vector(allzips$amount)))
+    colorBy <- as.numeric(as.vector(allzips$amount))
+    sizeBy <- as.numeric(as.vector(allzips$amount))
 
 
-      pal <- colorBin("Spectral", colorBy, 7, pretty = FALSE)
+      pal <- colorBin("Spectral", rev(colorBy), 7, pretty = FALSE)
     
 
         radius <- sizeBy /25

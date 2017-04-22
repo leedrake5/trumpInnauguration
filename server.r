@@ -106,9 +106,9 @@ function(input, output, session) {
     content <- as.character(tagList(
       tags$strong("Donation"),tags$br(),
      
-      sprintf("Amount %s", dollar(selectedZip$amount * 1000)), tags$br(),
-      sprintf("Name %s", selectedZip$name_clean), tags$br(),
-      sprintf("Address %s", selectedZip$google_address_normalized), tags$br()
+      sprintf("Amount: %s", dollar(selectedZip$amount * 1000)), tags$br(),
+      sprintf("Name: %s", selectedZip$name_clean), tags$br(),
+      sprintf("Address: %s", selectedZip$google_address_normalized), tags$br()
 
       )
     )
